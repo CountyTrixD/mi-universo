@@ -203,14 +203,17 @@ audio.loop=true;
 const intro=document.getElementById("intro");
 const startBtn=document.getElementById("startBtn");
 
-startBtn.onclick=()=>{
-audio.play();
-intro.style.opacity="0";
+startBtn.onclick = () => {
+    audio.currentTime = 0;
+    audio.play().catch(() => {});
+    
+    intro.style.opacity = "0";
 
-setTimeout(()=>{
-intro.style.display="none";
-},1500);
+    setTimeout(() => {
+        intro.style.display = "none";
+    }, 1500);
 };
+
 
 
 // ===== ANIMACION =====
@@ -241,3 +244,4 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 </body>
 </html>
+
