@@ -5,6 +5,30 @@
 <title>Mi Universo 💜</title>
 
 <style>
+
+/* ===== BRILLO PARA TEXTOS Y EMOJIS ===== */
+span {
+    font-size: 28px;
+    text-shadow:
+        0 0 5px #ff9ad5,
+        0 0 10px #ff9ad5,
+        0 0 20px #ff69b4;
+}
+
+/* ===== CONFIGURACION GENERAL ===== */
+body{
+    margin:0;
+    overflow:hidden;
+    background:black;
+    font-family:Arial;
+}
+
+canvas{
+    display:block;
+}
+
+</style>
+
 body{
 margin:0;
 overflow:hidden;
@@ -140,11 +164,11 @@ scene.add(stars);
 
 // ===== TEXTOS =====
 const words=[
-"Mi niña","Mi princesa","Mi bebé","Mi cielo",
-"Mi boba","Mi todo","Mi Ale","Mi Alejandra",
-"Alejandra","Mi hermosota","Mi amor",
-"Mi vida","Mi reina","Mi corazón",
-"Mi mundo","Mi felicidad","Mi estrella"
+"🧸 Mi niña 🧸","💙 Mi princesa 💙","♥️ Mi bebé ♥️","💟 Mi cielo 💟",
+"🩷 Mi boba 🩷","❤️ Mi todo ❤️","🤍 Mi Ale 🤍","💘 Mi Alejandra 💘",
+"🩵 Alejandra 🩵","❤️‍🔥 Mi hermosota ❤️‍🔥","🧸 Mi amor 🧸",
+"💜 Mi vida 💜","♥️ Mi reina 🩷","💟 Mi corazón 💟",
+"❤️‍🩹 Mi mundo ❤️‍🩹","♥️ Mi felicidad ♥️","💜 Mi estrella 💜"
 ];
 
 const textGroup=new THREE.Group();
@@ -244,4 +268,5 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 </body>
 </html>
+
 
