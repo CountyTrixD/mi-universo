@@ -193,9 +193,21 @@ transparent:true
 })
 );
 
-const radius=6+Math.random()*3;
-const angle=Math.random()*Math.PI*2;
-const height=(Math.random()-0.5)*4;
+// Distancia variada tipo galaxia
+let radius;
+
+const zone = Math.random();
+
+if(zone < 0.4){
+    radius = 2 + Math.random()*2;   // cerca del planeta
+}else if(zone < 0.75){
+    radius = 4 + Math.random()*3;   // distancia media
+}else{
+    radius = 7 + Math.random()*4;   // lejos
+}
+
+const angle = Math.random()*Math.PI*2;
+const height = (Math.random()-0.5)*5;
 
 sprite.position.set(
 Math.cos(angle)*radius,
@@ -262,6 +274,7 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 </body>
 </html>
+
 
 
 
