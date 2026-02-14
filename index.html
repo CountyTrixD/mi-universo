@@ -28,26 +28,36 @@ font-family:Arial;
 
 /* ===== PANTALLA INICIAL ===== */
 #intro{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:radial-gradient(circle,#ff66cc,#3b0066);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-z-index:10;
-color:white;
-text-align:center;
-transition:opacity 1.5s;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    z-index:999;
+    text-align:center;
 }
 
 #intro h1{
-font-size:48px;
-margin-bottom:20px;
+    font-size:48px;
+    text-shadow:0 0 20px pink;
 }
+
+#intro button{
+    margin-top:20px;
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:20px;
+    background:pink;
+    cursor:pointer;
+}
+
 
 .emoji{
 font-size:70px;
@@ -70,11 +80,10 @@ cursor:pointer;
 
 <!-- INTRO -->
 <div id="intro">
-<h1>Para Alejandra💜</h1>
-<div class="emoji">💗 🌻</div>
-<button id="startBtn">Entrar</button>
+    <h1>💜 Para Alejandra 💜</h1>
+    <p>Este pequeño universo es como te veo ✨</p>
+    <button id="startBtn">Entrar 💗</button>
 </div>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
 
@@ -218,18 +227,18 @@ textGroup.add(createText(word));
 const audio=new Audio("musica.mp3");
 audio.loop=true;
 
-const intro=document.getElementById("intro");
-const startBtn=document.getElementById("startBtn");
+const intro = document.getElementById("intro");
+const startBtn = document.getElementById("startBtn");
 
 startBtn.onclick = () => {
     audio.currentTime = 0;
-    audio.play().catch(() => {});
-    
+    audio.play().catch(()=>{});
+
     intro.style.opacity = "0";
 
-    setTimeout(() => {
+    setTimeout(()=>{
         intro.style.display = "none";
-    }, 1500);
+    },1500);
 };
 
 
@@ -262,6 +271,7 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 </body>
 </html>
+
 
 
 
