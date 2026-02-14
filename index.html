@@ -6,7 +6,7 @@
 
 <style>
 
-    /* ===== CONFIGURACION GENERAL ===== */
+/* ===== CONFIGURACION GENERAL ===== */
 body{
     margin:0;
     overflow:hidden;
@@ -16,14 +16,6 @@ body{
 
 canvas{
     display:block;
-}
-
-</style>
-body{
-margin:0;
-overflow:hidden;
-background:black;
-font-family:Arial;
 }
 
 /* ===== PANTALLA INICIAL ===== */
@@ -41,6 +33,7 @@ font-family:Arial;
     color:white;
     z-index:999;
     text-align:center;
+    transition:opacity 1.5s;
 }
 
 #intro h1{
@@ -48,32 +41,30 @@ font-family:Arial;
     text-shadow:0 0 20px pink;
 }
 
-#intro button{
-    margin-top:20px;
-    padding:12px 25px;
-    font-size:18px;
-    border:none;
-    border-radius:20px;
-    background:pink;
-    cursor:pointer;
-}
-
-
-.emoji{
-font-size:70px;
-margin-bottom:30px;
+#intro p{
+    font-size:20px;
+    opacity:0.9;
 }
 
 #startBtn{
-padding:15px 35px;
-font-size:20px;
-border:none;
-border-radius:30px;
-background:white;
-color:#7a00ff;
-cursor:pointer;
+    margin-top:20px;
+    padding:15px 35px;
+    font-size:20px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#7a00ff;
+    cursor:pointer;
+    transition:0.3s;
 }
+
+#startBtn:hover{
+    transform:scale(1.1);
+    background:pink;
+}
+
 </style>
+
 </head>
 
 <body>
@@ -271,6 +262,7 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 </body>
 </html>
+
 
 
 
