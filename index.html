@@ -183,7 +183,11 @@ canvas.width=512;
 canvas.height=128;
 
 ctx.fillStyle="white";
-ctx.font="bold 42px Arial";
+ctx.fillStyle = "white";
+ctx.font = "48px Arial, Segoe UI Emoji, Apple Color Emoji, Noto Color Emoji";
+ctx.textAlign = "center";
+ctx.fillText(text, 256, 64);
+
 ctx.textAlign="center";
 ctx.shadowColor="#bb66ff";
 ctx.shadowBlur=20;
@@ -268,5 +272,6 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 </body>
 </html>
+
 
 
