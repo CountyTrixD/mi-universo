@@ -90,7 +90,7 @@ window.innerWidth/window.innerHeight,
 1000
 );
 
-camera.position.z = 7;
+camera.position.z = 4.5;
 
 const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(window.innerWidth,window.innerHeight);
@@ -101,8 +101,8 @@ document.body.appendChild(renderer.domElement);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.enablePan = false;
-controls.minDistance = 3;
-controls.maxDistance = 12;
+controls.minDistance = 2;
+controls.maxDistance = 10;
 
 
 // ===== LUZ =====
@@ -198,12 +198,12 @@ let radius;
 
 const zone = Math.random();
 
-if(zone < 0.4){
-    radius = 2 + Math.random()*2;   // cerca del planeta
-}else if(zone < 0.75){
-    radius = 4 + Math.random()*3;   // distancia media
+if(zone < 0.45){
+    radius = 1.8 + Math.random()*1.5;   // MUY cerca
+}else if(zone < 0.8){
+    radius = 3.5 + Math.random()*2;     // medio
 }else{
-    radius = 7 + Math.random()*4;   // lejos
+    radius = 6 + Math.random()*4;       // lejos
 }
 
 const angle = Math.random()*Math.PI*2;
@@ -274,6 +274,7 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 
 </body>
 </html>
+
 
 
 
